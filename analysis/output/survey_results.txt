@@ -1,0 +1,79 @@
+STUDYMATE SURVEY ANALYSIS  (form v1, n = 30)
+
+1. DESCRIPTIVE STATISTICS (Likert items coded 1-5; time in minutes, bins use midpoints)
+  struggle: n=30, mean=2.97, median=3.00, mode=3, SD=1.03, min=1, max=5, 95% CI for mean=(2.58, 3.35)
+  exact: n=29, mean=3.34, median=3.00, mode=4, SD=1.04, min=1, max=5, 95% CI for mean=(2.95, 3.74)
+  time_min: n=30, mean=11.35, median=8.00, mode=8, SD=7.28, min=0.5, max=25, 95% CI for mean=(8.63, 14.07)
+  year counts: {'2nd year': 14, '3rd year': 6, '1st year': 5, '4th year': 5}
+  freq counts: {'Several times a week': 10, 'Once a week': 7, 'Daily': 7, 'Rarely': 4, 'Occassionally': 2}
+  struggle counts: {'Sometimes': 14, 'Often': 6, 'Rarely': 5, 'Never': 3, 'Very often': 2}
+  exact counts: {'Usually': 11, 'Sometimes': 10, 'Always': 3, 'Rarely': 3, 'Never': 2, 'Rarely,Yes"': 1}
+  useful counts: {'Yes': 26, 'No': 3}
+
+  sources (multi-select, % of respondents):
+    Friends or classmates: 7/30 = 23%  (95% Wilson CI 12-41%)
+    Google or other websites: 5/30 = 17%  (95% Wilson CI 7-34%)
+    College LMS or website: 4/30 = 13%  (95% Wilson CI 5-30%)
+    WhatsApp or Telegram groups: 3/30 = 10%  (95% Wilson CI 3-26%)
+    WhatsApp or Telegram groups; Friends or classmates: 2/30 = 7%  (95% Wilson CI 2-21%)
+    WhatsApp or Telegram groups; College LMS or website; Friends or classmates: 2/30 = 7%  (95% Wilson CI 2-21%)
+    Google or other websites; WhatsApp or Telegram groups: 2/30 = 7%  (95% Wilson CI 2-21%)
+    WhatsApp or Telegram groups;College LMS or website: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Google or other websites; WhatsApp or Telegram groups; Friends or classmates: 1/30 = 3%  (95% Wilson CI 1-17%)
+    College LMS or website; Friends or classmates: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Google or other websites; College LMS or website: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Google or other websites; College LMS or website; WhatsApp or Telegram groups: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Google or other websites; Friends or classmates: 1/30 = 3%  (95% Wilson CI 1-17%)
+    College LMS or website; Google or other websites: 1/30 = 3%  (95% Wilson CI 1-17%)
+    College LMS or website; WhatsApp or Telegram groups: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Google or other websites; WhatsApp or Telegram groups; College LMS or website: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Friends or classmates; College LMS or website: 1/30 = 3%  (95% Wilson CI 1-17%)
+    WhatsApp or Telegram groups; Google or other websites: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Google or other websites; College LMS or website; Friends or classmates: 1/30 = 3%  (95% Wilson CI 1-17%)
+    College LMS or website; Google or other websites": 1/30 = 3%  (95% Wilson CI 1-17%)
+    WhatsApp or Telegram groups; Friends or classmates; Google or other websites: 1/30 = 3%  (95% Wilson CI 1-17%)
+
+  problems (multi-select, % of respondents):
+    Difficulty finding subject or unit-specific resources: 10/30 = 33%  (95% Wilson CI 19-51%)
+    Material is scattered across platforms: 5/30 = 17%  (95% Wilson CI 7-34%)
+    Material is scattered across platforms; Difficulty finding subject or unit-specific resources: 4/30 = 13%  (95% Wilson CI 5-30%)
+    Broken or unavailable links: 3/30 = 10%  (95% Wilson CI 3-26%)
+    Wrong or outdated material: 2/30 = 7%  (95% Wilson CI 2-21%)
+    Wrong or outdated material; Broken or unavailable links: 2/30 = 7%  (95% Wilson CI 2-21%)
+    Material is scattered across platforms; Wrong or outdated material: 2/30 = 7%  (95% Wilson CI 2-21%)
+    Material is scattered across platforms; Wrong or outdated material; Broken or unavailable links: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Wrong or outdated material; Difficulty finding subject or unit-specific resources; Broken or unavailable links: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Material is scattered across platforms; Wrong or outdated material; Difficulty finding subject or unit-specific resources; Broken or unavailable links: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Material is scattered across platforms; Broken or unavailable links: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Difficulty finding subject or unit-specific resources; Broken or unavailable links: 1/30 = 3%  (95% Wilson CI 1-17%)
+    Material is scattered across platforms; Difficulty finding subject or unit-specific resources; Broken or unavailable links: 1/30 = 3%  (95% Wilson CI 1-17%)
+
+2. CORRELATIONS (Spearman rank, because Likert data are ordinal)
+  struggle vs exact: rho=-0.56, p=0.002, n=29 -> moderate negative, statistically significant
+  struggle vs time_min: rho=+0.45, p=0.013, n=30 -> moderate positive, statistically significant
+  exact vs time_min: rho=-0.56, p=0.002, n=29 -> moderate negative, statistically significant
+  Reminder: correlation does not show cause.
+
+3. BASELINE HYPOTHESIS TEST (current situation vs neutral score 3)
+  Variable: exact. H0: mean = 3 (neutral). H1: mean < 3 (users are below neutral). alpha = 0.05
+  One-sample t-test: t=1.78, p=0.957
+  Wilcoxon signed-rank: W=133.5, p=0.948  (preferred for Likert data)
+  Mean=3.34, 95% CI=(2.95, 3.74), effect size d=+0.33
+  Conclusion: Fail to reject H0. With n=29 we cannot show the current situation is below neutral (this is not proof that it is fine).
+
+4. PAIN-POINT RANKING (share of users affected x average severity)
+  Difficulty finding subject or unit-specific resources: 18/30 affected (60%), mean struggle=3.11, priority score=1.87
+  Material is scattered across platforms: 15/30 affected (50%), mean struggle=3.33, priority score=1.67
+  Broken or unavailable links: 11/30 affected (37%), mean struggle=3.27, priority score=1.20
+  Wrong or outdated material: 9/30 affected (30%), mean struggle=3.33, priority score=1.00
+  Material is scattered across platforms; Difficulty finding subject or unit-specific resources: 5/30 affected (17%), mean struggle=3.40, priority score=0.57
+  Difficulty finding subject or unit-specific resources; Broken or unavailable links: 4/30 affected (13%), mean struggle=4.25, priority score=0.57
+  Material is scattered across platforms; Wrong or outdated material: 4/30 affected (13%), mean struggle=3.75, priority score=0.50
+  Wrong or outdated material; Broken or unavailable links: 3/30 affected (10%), mean struggle=3.00, priority score=0.30
+  Wrong or outdated material; Difficulty finding subject or unit-specific resources; Broken or unavailable links: 2/30 affected (7%), mean struggle=4.50, priority score=0.30
+  Material is scattered across platforms; Wrong or outdated material; Difficulty finding subject or unit-specific resources; Broken or unavailable links: 1/30 affected (3%), mean struggle=5.00, priority score=0.17
+  Material is scattered across platforms; Wrong or outdated material; Broken or unavailable links: 1/30 affected (3%), mean struggle=4.00, priority score=0.13
+  Material is scattered across platforms; Broken or unavailable links: 1/30 affected (3%), mean struggle=4.00, priority score=0.13
+  Material is scattered across platforms; Difficulty finding subject or unit-specific resources; Broken or unavailable links: 1/30 affected (3%), mean struggle=4.00, priority score=0.13
+
+LIMITS: convenience sample, self-reported data, small n; results describe this sample only.

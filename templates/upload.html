@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Upload Resource | StudyMate{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="page-header-inner">
+    <span class="pill">
+      <span class="pill-dot"></span>
+      Contribute to the community
+    </span>
+    <h1>Share your <span class="gradient-text">notes</span>.</h1>
+    <p class="sub">Help your batchmates by uploading verified notes, practical files, and templates. Every file saves someone hours of scrolling.</p>
+  </div>
+</section>
+
+<section class="container form-section">
+  <form id="uploadForm" class="glass-form" novalidate>
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g., Python Unit 2 Practical Programs" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+        <option value="">Select a subject</option>
+        <optgroup label="Core Engineering">
+          <option>Python</option>
+          <option>Probability and Statistics</option>
+          <option>Web Technology</option>
+          <option>Data Structures</option>
+          <option>Operating Systems</option>
+          <option>Computer Networks</option>
+        </optgroup>
+        <optgroup label="Foundation">
+          <option>Mathematics</option>
+          <option>Design Thinking</option>
+          <option>Artificial Intelligence</option>
+        </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <input type="text" id="unit" name="unit" placeholder="e.g., Unit 2" required>
+      </div>
+
+      <div class="form-group">
+        <label for="resource_type">Resource Type</label>
+        <select id="resource_type" name="resource_type" required>
+          <option>Notes</option>
+          <option>Practical</option>
+          <option>Template</option>
+          <option>Previous Year Paper</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description <span class="optional">(optional)</span></label>
+      <textarea id="description" name="description" rows="3" placeholder="Briefly describe what's inside this file..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Upload File</label>
+      <div class="file-drop" id="fileDrop">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        <p class="file-text">Drop your file here or <span>browse</span></p>
+        <p class="file-hint">PDF, DOCX, PPT, TXT, ZIP, PNG, JPG · Max 10 MB</p>
+        <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt,.zip,.png,.jpg,.jpeg" required>
+      </div>
+      <p class="file-name" id="fileName"></p>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">
+      Upload Resource
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+
+    <p id="formMessage" class="message"></p>
+  </form>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='upload.js') }}"></script>
+{% endblock %}

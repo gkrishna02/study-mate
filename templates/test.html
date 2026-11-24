@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Usability Test | StudyMate{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="page-header-inner">
+    <span class="pill">
+      <span class="pill-dot"></span>
+      Usability Study · Paired Design
+    </span>
+    <h1>Help us <span class="gradient-text">validate</span> StudyMate.</h1>
+    <p class="sub">You will complete two quick tasks and rate the prototype. Everything is timed automatically and stored anonymously.</p>
+  </div>
+</section>
+
+<section class="container test-section">
+  <!-- STEP 1: Consent -->
+  <div id="stepStart" class="glass-card">
+    <div class="card-icon">🔒</div>
+    <h2>Informed Consent</h2>
+    <p class="muted">
+      This research compares the current WhatsApp method with the StudyMate prototype.
+      Your timings and responses are stored anonymously under a participant code
+      (P01, P02, …). No names, emails or phone numbers are collected.
+    </p>
+    <div class="form-group">
+      <label for="year">Your Year of Study</label>
+      <select id="year" required>
+        <option value="">Select your year</option>
+        <option>First Year</option>
+        <option>Second Year</option>
+        <option>Third Year</option>
+        <option>Fourth Year</option>
+      </select>
+    </div>
+    <label class="checkbox">
+      <input type="checkbox" id="consent">
+      <span>I understand and consent to participate.</span>
+    </label>
+    <button class="btn btn-primary btn-block" id="startBtn" disabled>Start Test</button>
+  </div>
+
+  <!-- STEP 2: Task instruction -->
+  <div id="stepRun" class="glass-card" hidden>
+    <div class="card-icon">⏱️</div>
+    <h2 id="runTitle">Task 1 of 2</h2>
+    <p id="runText" class="muted"></p>
+    <div class="task-meta" id="runMeta"></div>
+    <button class="btn btn-primary btn-block" id="beginBtn">Begin Task</button>
+  </div>
+
+  <!-- STEP 3: SUS + Satisfaction -->
+  <div id="stepSus" class="glass-card" hidden>
+    <div class="card-icon">📋</div>
+    <h2>Final Questionnaire</h2>
+    <p class="muted">Please rate StudyMate using the System Usability Scale and compare the two methods.</p>
+
+    <div id="susQuestions" class="sus-list"></div>
+
+    <div class="form-grid" style="margin-top: 1.5rem;">
+      <div class="form-group">
+        <label>Satisfaction with WhatsApp (1–10)</label>
+        <input type="number" id="satCurrent" min="1" max="10" required>
+      </div>
+      <div class="form-group">
+        <label>Satisfaction with StudyMate (1–10)</label>
+        <input type="number" id="satStudyMate" min="1" max="10" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Any comments? <span class="optional">(optional)</span></label>
+      <textarea id="comment" rows="2" placeholder="What did you like or dislike?"></textarea>
+    </div>
+
+    <button class="btn btn-primary btn-block" id="submitSusBtn">Submit Feedback</button>
+    <p id="susMessage" class="message"></p>
+  </div>
+
+  <!-- STEP 4: Done -->
+  <div id="stepDone" class="glass-card" hidden>
+    <div class="card-icon">🎉</div>
+    <h2>Thank you!</h2>
+    <p class="muted">Your participation has been recorded. Your responses will shape the final StudyMate prototype.</p>
+    <button class="btn btn-primary btn-block" id="newTestBtn">Start New Test (next participant)</button>
+    <a href="/" class="btn btn-block" style="background: transparent; color: var(--muted); margin-top: 0.5rem;">Return to StudyMate</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='test.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}StudyMate — Find Study Resources Instantly{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <span class="pill">
+      <span class="pill-dot"></span>
+      Every note, one search away
+    </span>
+    <h1>
+      Stop scrolling group chats.<br>
+      <span class="gradient-text">Start finding your notes.</span>
+    </h1>
+    <p class="sub">
+      StudyMate is your smart study resource finder — verified notes, practical files,
+      and templates across all your subjects. One search, zero chaos.
+    </p>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <label class="sr" for="searchInput">Search resources</label>
+        <input type="search" id="searchInput" placeholder="Try &quot;python practical&quot; or &quot;hypothesis testing&quot;" autocomplete="off">
+        <button id="searchButton" type="button" class="btn btn-primary">
+          Search
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="chips" class="chips" role="group" aria-label="Filter by subject"></div>
+  </div>
+</section>
+
+<section class="results container">
+  <div class="results-bar">
+    <div>
+      <h2 id="resultsTitle">Resources</h2>
+      <p id="resultCount" class="count">Loading…</p>
+    </div>
+    <div class="unit-pick">
+      <label for="unitFilter">Unit</label>
+      <select id="unitFilter"><option value="">All units</option></select>
+    </div>
+  </div>
+  <div id="resourceList" class="resource-list"></div>
+  <p id="message" class="message"></p>
+</section>
+{% endblock %}
+
+{% block scripts %}<script src="{{ url_for('static', filename='script.js') }}"></script>{% endblock %}

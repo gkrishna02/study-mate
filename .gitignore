@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+
+# Database (contains personal test data — should not be public)
+studymate.db
+*.db
+*.sqlite
+
+# Uploaded files (personal PDFs)
+uploads/*.pdf
+uploads/*.docx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# But KEEP these important folders:
+!analysis/data/*.csv
+!docs/
+
+# Uploaded placeholder files
+uploads/*.txt

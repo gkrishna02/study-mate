@@ -1,0 +1,36 @@
+
+StudyMate — Testing & Validation Results
+========================================
+Participants tested: 3
+(Paired design: each participant searched using both WhatsApp and StudyMate)
+
+Current method (WhatsApp):
+  Mean time:   136.14 sec (2.27 min)
+  Median time: 97.28 sec
+  SD:          81.05 sec
+
+StudyMate prototype:
+  Mean time:   18.78 sec (0.31 min)
+  Median time: 19.71 sec
+  SD:          8.85 sec
+
+Improvement:
+  Absolute:    117.37 sec faster
+  Relative:    86.2% faster
+
+Paired t-test:
+  t = -2.492, two-tailed p = 0.1303, one-tailed p = 0.0651
+Wilcoxon signed-rank:
+  W = 0.0, p = 0.125
+Cohen's d (paired): 1.44 (large effect)
+
+SUS: 100.0 / 100 (n = 3)
+Satisfaction — WhatsApp: 2.0 / 10
+Satisfaction — StudyMate: 8.0 / 10
+
+LIMITATIONS:
+  - Small sample (n = 3) → findings are exploratory; CIs wide.
+  - Self-recorded times; "current" method simulated (no live WhatsApp group available).
+  - Single-college convenience sample.
+
+Conclusion: The paired data shows a consistent, large reduction in search time with StudyMate, but a larger sample would be needed for statistical significance at α = 0.05.
