@@ -17,3 +17,4 @@ StudyMate is a web application designed to help students quickly find verified n
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+Preksha: ### Contribution by Preksha Thakkar / Role: Research Lead
