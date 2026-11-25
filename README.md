@@ -23,3 +23,6 @@ Hridhani: Contribution by Hridhani Patel / Role: Frontend Lead
 
 Charmi: Contribution by Charmi Javiya /
 Role: Statistics Lead
+
+Jinisha: Contribution by Jinisha Suru /
+Role: Backend Lead
