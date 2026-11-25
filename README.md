@@ -19,7 +19,11 @@ StudyMate is a web application designed to help students quickly find verified n
    pip install -r requirements.txt
 
 Krishna: Contribution by Krishna Ghoghari / Role: Project & Documentation Lead
+
 Preksha: Contribution by Preksha Thakkar / Role: Research Lead
+
 Hridhani: Contribution by Hridhani Patel / Role: Frontend Lead
+
 Charmi: Contribution by Charmi Javiya / Role: Statistics Lead
+
 Jinisha: Contribution by Jinisha Suru / Role: Backend Lead
